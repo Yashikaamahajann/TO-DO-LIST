@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #2d3644;
+    color: white;
+}
+
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #f7d4ed ;
+}
+
+header i{
+    width: 30px;
+    margin-left: 10px;
+    color: #6B7280;
+}
+
+#new-task-form{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input{
+    flex: 1 1 0%;
+    background-color: #f72889; 
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+#new-task-input::placeholder{
+    color: rgb(237, 169, 206);
+}
+
+#new-task-submit{
+    color: #e9b5cf ;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #fed7ea);
+    cursor: pointer;
+}
+
+
+#new-task-submit:hover{
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity: 0.6;
+}
+
+#search-container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#searchInput {
+    flex: 1 1 0%;
+    background-color: #f30f81; 
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: rgb(23, 16, 16);
+    font-size: 1.25rem;
+}
+
+#searchInput::placeholder {
+    color: rgb(254, 207, 207);
+}
+
+#searchButton {
+    color: #eab4cf ;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #EC4899);
+    cursor: pointer;
+    /* transition: 0.4s; */
+}
+
+#searchButton:hover {
+    opacity: 0.8;
+}
+
+#searchButton:active {
+    opacity: 0.6;
+}
+
+
+#sortButton {
+    color: #eab4cf ;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #EC4899);
+    cursor: pointer;
+    /* transition: background-color 0.3s ease-in-out; */
+  }
+
+
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1 rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 1rem;
+}
+
+.task-list h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #b7c0d4;
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111827; 
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content{
+    color: rgb(254, 211, 226);
+}
+
+#tasks .task .content .text{
+    color: rgb(247, 229, 130);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(read-only){
+    color: rgb(244, 234, 52); 
+}
+
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    color: #e4b8ce;
+    background-image: linear-gradient(to right,#EC4899);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.task .actions .delete{
+    color: #d90d0d;
+    background-image: linear-gradient(to right, #EC4899);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+#noResults {
+    color:#a18787 ;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    display: none;
+    font-family: sans-serif;
+}
+
+.dropbtn {
+    color:#fbfbfb;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #EC4899);
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #bccced;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(185, 169, 170, 0.132);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    font-family: sans-serif;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.show {
+    display:block;
+}
+
+
+#due-date {
+    color: #e5da0d;
+    font-size: 1.25rem;
+    font-weight: 700;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header>
+        <h1>Task List<i class="fa-solid fa-list-check"></i></h1>
+        <form id="new-task-form">
+            <input type="text" id="new-task-input" placeholder="What do you want to add?">
+            <input type="date" id="due-date" placeholder="Due Date">
+            <input type="Submit" id="new-task-submit" value="Add Task">
+
+
+            </form>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Category</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#" onclick="changeCategory('Official')">Official</a>
+                  <a href="#" onclick="changeCategory('Personal')">Personal</a>
+                  <a href="#" onclick="changeCategory('Work')">Work</a>
+                </div>
+              </div>
+
+
+
+        <div id="search-container">
+            <input type="text" id="searchInput" placeholder="Search Task!">
+            <button id="searchButton">Search</button>
+            <button id="sortButton">Sort by date</button>
+        </div>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2><u>Tasks</u> : </h2>
+            <div id="tasks">
+            <div id="noResults" style="display: none;">
+                No Result Found
+            </div>
+                    
+
+        </section>
+    </main>
+    <script src="todolist.js"></script>
+</body>
+</html>
